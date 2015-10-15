@@ -77,7 +77,7 @@ class RequireJSExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'require_js_initialize' => new \Twig_Function_Method($this, 'renderInitialize', array('is_safe' => array('html'))),
+             new \Twig_SimpleFunction('require_js_initialize', array($this, 'renderInitialize'), array('is_safe' => array('html'))),
         );
     }
 
